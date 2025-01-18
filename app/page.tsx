@@ -89,7 +89,7 @@ export default function Home() {
           {/* Hero Section */}
           <div className="relative z-10 text-center px-4">
             <h1 className="text-4xl sm:text-6xl font-bold mb-6 animate-[fadeIn_1s_ease-out] [text-shadow:_0_4px_8px_rgb(0_0_0_/_20%)]">
-              Welcome to Banker's Ville
+              Welcome to Banker&apos;s Ville
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-[fadeIn_1s_ease-out_0.5s_both]">
               The first self-evolving AI-enabled digital economy system
@@ -162,7 +162,7 @@ export default function Home() {
               >
                 <h2 className="text-xl mb-4 text-gray-300">Hold virtual real estate</h2>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                  Become a landlord in the Banker's Ville
+                  Become a landlord in the Banker&apos;s Ville
                 </h1>
               </div>
 
