@@ -1,0 +1,41 @@
+[33mcommit 18e4f7780240b8f095da92361fa54ac05cd4dac1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: font <563528@qq.com>
+Date:   Sat Jan 18 15:52:14 2025 +0800
+
+    feat: add AI chat interface with Sarah
+    
+    - Add chat interface component with dark theme
+    - Create Sarah character as town secretary
+    - Add placeholder chat functionality
+    - Style chat UI to match site theme
+    - TODO: Implement real AI chat functionality
+
+[33mcommit 3303b5b04a47e9b0219ff04f47502721dd9f17a5[m
+Author: font <563528@qq.com>
+Date:   Sat Jan 18 15:16:50 2025 +0800
+
+    feat: update content and layout
+    
+    - Update homepage hero section text
+    - Update second section title and description
+    - Replace images in Ville Assets for Central Plaza and Coastal Park
+    - Update third section layout and image
+    - Improve third section spacing and image display
+    - Adjust container width and grid layout
+
+[33mcommit 8361ba7811e5f7c86bd79bfa338b92993ada289d[m
+Author: font <563528@qq.com>
+Date:   Sat Jan 18 13:03:01 2025 +0800
+
+    feat: add scroll animation to second section
+    
+    - Add Intersection Observer for scroll detection
+    - Add fade and slide animations for section elements
+    - Improve animation performance using style transitions
+    - Add sequential animation delays for better visual effect
+
+[33mcommit 6044dbc34df74f05c4cae91b5cef53c330489308[m
+Author: font <563528@qq.com>
+Date:   Sat Jan 18 11:33:01 2025 +0800
+
+    初始版本：完成首页和小镇地图功能

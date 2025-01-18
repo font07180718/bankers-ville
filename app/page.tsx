@@ -257,15 +257,15 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="relative w-full max-w-[1200px]">
                 {/* Main Chat Container */}
-                <div className="bg-[#1A0B2E]/80 backdrop-blur-md rounded-3xl overflow-hidden flex shadow-2xl border border-[#00CCFF]/20">
+                <div className="bg-[#1A0B2E]/80 backdrop-blur-md rounded-3xl overflow-hidden flex">
                   {/* Left Side - Character */}
-                  <div className="w-[380px] bg-gradient-to-b from-[#1A0B2E] to-[#0D0522] flex items-center justify-center">
+                  <div className="w-[380px] bg-gradient-to-b from-[#1A0B2E] to-[#0D0522] flex items-center justify-center py-8">
                     <div className="relative w-full h-[450px]">
                       <Image
                         src="/images/girl.png"
                         alt="Virtual Assistant"
                         fill
-                        className="object-contain object-bottom scale-125 drop-shadow-[0_0_15px_rgba(0,204,255,0.2)]"
+                        className="object-contain object-bottom scale-125"
                         priority
                         sizes="380px"
                       />
@@ -273,10 +273,10 @@ export default function Home() {
                   </div>
                   
                   {/* Right Side - Chat Interface */}
-                  <div className="flex-1 bg-[#1A0B2E]/60 backdrop-blur-sm flex flex-col min-h-[450px]">
+                  <div className="flex-1 flex flex-col min-h-[550px] max-h-[550px]">
                     {/* Chat Header */}
-                    <div className="p-3 border-b border-[#00CCFF]/20">
-                      <h3 className="text-base font-semibold text-[#00CCFF]">Sarah, the secretary of the town</h3>
+                    <div className="p-4 border-b border-[#00CCFF]/20">
+                      <h3 className="text-lg font-semibold text-[#00CCFF]">Sarah, the secretary of the town</h3>
                     </div>
                     
                     {/* Messages Area */}
