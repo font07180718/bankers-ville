@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from "next/image"
 import { Landmark, Wallet } from "lucide-react"
+import AIChatbot from "@/components/AIChatbot"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
@@ -242,6 +243,55 @@ export default function Home() {
           {/* Animated gradient orbs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute w-[500px] h-[500px] bg-[#0066FF]/20 rounded-full blur-[100px] top-20 right-20 animate-[float_6s_ease-in-out_infinite]" />
+            <div className="absolute w-[500px] h-[500px] bg-[#FF3366]/20 rounded-full blur-[100px] -bottom-20 -left-20 animate-[float_8s_ease-in-out_infinite_reverse]" />
+          </div>
+        </div>
+
+        {/* AI Chat Section */}
+        <div className="relative min-h-screen flex items-center">
+          {/* Background with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1A0B2E] to-[#0D0522]" />
+          
+          {/* Content */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pt-20">
+            <div className="flex flex-col items-center">
+              <div className="relative w-full max-w-[1200px]">
+                {/* Main Chat Container */}
+                <div className="bg-[#1A0B2E]/80 backdrop-blur-md rounded-3xl overflow-hidden flex shadow-2xl border border-[#00CCFF]/20">
+                  {/* Left Side - Character */}
+                  <div className="w-[380px] bg-gradient-to-b from-[#1A0B2E] to-[#0D0522] flex items-center justify-center">
+                    <div className="relative w-full h-[450px]">
+                      <Image
+                        src="/images/girl.png"
+                        alt="Virtual Assistant"
+                        fill
+                        className="object-contain object-bottom scale-125 drop-shadow-[0_0_15px_rgba(0,204,255,0.2)]"
+                        priority
+                        sizes="380px"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Right Side - Chat Interface */}
+                  <div className="flex-1 bg-[#1A0B2E]/60 backdrop-blur-sm flex flex-col min-h-[450px]">
+                    {/* Chat Header */}
+                    <div className="p-3 border-b border-[#00CCFF]/20">
+                      <h3 className="text-base font-semibold text-[#00CCFF]">Sarah, the secretary of the town</h3>
+                    </div>
+                    
+                    {/* Messages Area */}
+                    <div className="flex-1">
+                      <AIChatbot />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Animated gradient orbs */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute w-[500px] h-[500px] bg-[#0066FF]/20 rounded-full blur-[100px] -top-20 -right-20 animate-[float_6s_ease-in-out_infinite]" />
             <div className="absolute w-[500px] h-[500px] bg-[#FF3366]/20 rounded-full blur-[100px] -bottom-20 -left-20 animate-[float_8s_ease-in-out_infinite_reverse]" />
           </div>
         </div>
