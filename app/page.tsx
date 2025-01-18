@@ -89,10 +89,10 @@ export default function Home() {
           {/* Hero Section */}
           <div className="relative z-10 text-center px-4">
             <h1 className="text-4xl sm:text-6xl font-bold mb-6 animate-[fadeIn_1s_ease-out] [text-shadow:_0_4px_8px_rgb(0_0_0_/_20%)]">
-              探索无限可能的元宇宙
+              Welcome to Banker's Ville
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-[fadeIn_1s_ease-out_0.5s_both]">
-              在这里，创造力无边界，体验无限可能
+              The first self-evolving AI-enabled digital economy system
             </p>
           </div>
 
@@ -160,13 +160,10 @@ export default function Home() {
                   transition: 'all 1s ease-out 0.2s'
                 }}
               >
-                <h2 className="text-xl mb-4 text-gray-300">明有虚土</h2>
+                <h2 className="text-xl mb-4 text-gray-300">Hold virtual real estate</h2>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                  成为元宇宙先驱
+                  Become a landlord in the Banker's Ville
                 </h1>
-                <p className="text-lg text-gray-300">
-                  The second AdventureWorld LAND sale is now open! Join Brawlers Ring, featuring King Kong LANDs, and build experiences next to King Kong!
-                </p>
               </div>
 
               {/* Right side - Image */}
@@ -210,19 +207,19 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0D0522] to-[#1A0B2E]" />
           
           {/* Content Grid */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Left Side - Image */}
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="lg:col-span-7 relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
               <Image
-                src="/pic/alpha-season.jpg"
+                src="/images/map.png"
                 alt="Alpha Season 4"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
 
             {/* Right Side - Content */}
-            <div className="text-left">
+            <div className="lg:col-span-5 text-left">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-gray-400"></span>
                 <span className="text-gray-400">已结束 - 12月18日</span>
