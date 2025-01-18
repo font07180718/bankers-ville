@@ -23,13 +23,14 @@ export default function Home() {
       }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+    const element = sectionRef.current
+    if (element) {
+      observer.observe(element)
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (element) {
+        observer.unobserve(element)
       }
     }
   }, [])
@@ -55,7 +56,7 @@ export default function Home() {
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3">
                   <h1 className="text-2xl font-bold text-white tracking-wide">
-                    {"Banker's Ville"}
+                    Banker&apos;s Ville
                   </h1>
                   <span className="text-gray-400">|</span>
                   <span className="text-sm text-gray-400 italic">
