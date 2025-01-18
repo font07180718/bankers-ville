@@ -2,17 +2,19 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from "next/image"
-import { Landmark, Wallet } from "lucide-react"
+import { Wallet } from "lucide-react"
 import AIChatbot from "@/components/AIChatbot"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        if (entry) {
+          setIsVisible(entry.isIntersecting)
+        }
       },
       {
         root: null,
@@ -21,14 +23,13 @@ export default function Home() {
       }
     )
 
-    const currentRef = sectionRef.current
-    if (currentRef) {
-      observer.observe(currentRef)
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef)
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
       }
     }
   }, [])
@@ -41,7 +42,6 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             {/* Logo Section */}
             <div className="flex items-center gap-4">
-              {/* Logo Image */}
               <div className="flex items-center -ml-4 mt-2">
                 <Image
                   src="/pic/logo.jpg"
@@ -52,11 +52,10 @@ export default function Home() {
                 />
               </div>
               
-              {/* Logo Text */}
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3">
                   <h1 className="text-2xl font-bold text-white tracking-wide">
-                    Banker's Ville
+                    {"Banker's Ville"}
                   </h1>
                   <span className="text-gray-400">|</span>
                   <span className="text-sm text-gray-400 italic">
@@ -69,7 +68,6 @@ export default function Home() {
             {/* Navigation */}
             <div className="flex items-center gap-6">
               <a href="/map" className="flex items-center space-x-2 hover:text-[#00CCFF] transition-colors hover:scale-105 transform duration-300">
-                <Landmark size={18} />
                 <span>Ville Assets</span>
               </a>
               

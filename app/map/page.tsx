@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { ArrowLeft, Landmark } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 interface VoteProject {
