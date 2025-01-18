@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from "next/image"
-import { Wallet } from "lucide-react"
+import { Wallet, Landmark } from "lucide-react"
 import AIChatbot from "@/components/AIChatbot"
 
 export default function Home() {
@@ -38,45 +38,49 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#1A0B2E] text-white overflow-hidden">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-[#1A0B2E]/80 backdrop-blur-sm z-50">
+      <header className="fixed top-0 w-full bg-[#1A0B2E]/30 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex flex-col sm:flex-row justify-between items-center py-4 sm:h-16 gap-4 sm:gap-0">
             {/* Logo Section */}
             <div className="flex items-center gap-4">
-              <div className="flex items-center -ml-4 mt-2">
+              <div className="flex items-center">
                 <Image
                   src="/pic/logo.jpg"
                   alt="Logo"
-                  width={80}
-                  height={80}
+                  width={60}
+                  height={60}
                   className="rounded-full shadow-lg"
                 />
               </div>
               
               <div className="flex flex-col justify-center">
-                <div className="flex items-center gap-3">
-                  <h1 className="text-2xl font-bold text-white tracking-wide">
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+                  <h1 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
                     Banker&apos;s Ville
                   </h1>
-                  <span className="text-gray-400">|</span>
-                  <span className="text-sm text-gray-400 italic">
-                    Where AI dreams trade in digital whispers
-                  </span>
+                  <div className="hidden sm:flex items-center gap-3">
+                    <span className="text-gray-400">|</span>
+                    <span className="text-sm text-gray-400 italic">
+                      Where AI dreams trade in digital whispers
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Navigation */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <a href="/map" className="flex items-center space-x-2 hover:text-[#00CCFF] transition-colors hover:scale-105 transform duration-300">
+                <Landmark size={16} />
                 <span>Ville Assets</span>
               </a>
               
               <button 
-                className="px-4 py-2 border border-[#00CCFF] text-[#00CCFF] rounded-full hover:bg-[#00CCFF]/10 transition-all flex items-center gap-2"
+                className="px-3 sm:px-4 py-2 border border-[#00CCFF] text-[#00CCFF] rounded-full hover:bg-[#00CCFF]/10 transition-all flex items-center gap-2 text-sm sm:text-base"
               >
                 <Wallet size={16} />
-                <span>Connect Wallet</span>
+                <span className="hidden sm:inline">Connect Wallet</span>
+                <span className="sm:hidden">Connect</span>
               </button>
             </div>
           </div>
@@ -247,34 +251,34 @@ export default function Home() {
         </div>
 
         {/* AI Chat Section */}
-        <div className="relative min-h-screen flex items-center">
+        <div className="relative min-h-screen flex items-center py-8 sm:py-0">
           {/* Background with gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#1A0B2E] to-[#0D0522]" />
           
           {/* Content */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pt-20">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pt-10 sm:pt-20">
             <div className="flex flex-col items-center">
               <div className="relative w-full max-w-[1200px]">
                 {/* Main Chat Container */}
-                <div className="bg-[#1A0B2E]/80 backdrop-blur-md rounded-3xl overflow-hidden flex">
+                <div className="bg-[#1A0B2E]/80 backdrop-blur-md rounded-3xl overflow-hidden flex flex-col sm:flex-row">
                   {/* Left Side - Character */}
-                  <div className="w-[380px] bg-gradient-to-b from-[#1A0B2E] to-[#0D0522] flex items-center justify-center py-8">
-                    <div className="relative w-full h-[450px]">
+                  <div className="w-full sm:w-[380px] bg-gradient-to-b from-[#1A0B2E] to-[#0D0522] flex items-center justify-center py-4 sm:py-8">
+                    <div className="relative w-full h-[300px] sm:h-[450px]">
                       <Image
                         src="/images/girl.png"
                         alt="Virtual Assistant"
                         fill
-                        className="object-contain object-bottom scale-125"
+                        className="object-contain object-bottom scale-110 sm:scale-125"
                         priority
-                        sizes="380px"
+                        sizes="(max-width: 640px) 100vw, 380px"
                       />
                     </div>
                   </div>
                   
                   {/* Right Side - Chat Interface */}
-                  <div className="flex-1 flex flex-col min-h-[550px] max-h-[550px]">
+                  <div className="flex-1 flex flex-col min-h-[450px] sm:min-h-[550px] max-h-[450px] sm:max-h-[550px]">
                     {/* Chat Header */}
-                    <div className="p-4 border-b border-[#00CCFF]/20">
+                    <div className="p-3 sm:p-4 border-b border-[#00CCFF]/20">
                       <h3 className="text-lg font-semibold text-[#00CCFF]">Sarah, the secretary of the town</h3>
                     </div>
                     
@@ -289,9 +293,9 @@ export default function Home() {
           </div>
 
           {/* Animated gradient orbs */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute w-[500px] h-[500px] bg-[#0066FF]/20 rounded-full blur-[100px] -top-20 -right-20 animate-[float_6s_ease-in-out_infinite]" />
-            <div className="absolute w-[500px] h-[500px] bg-[#FF3366]/20 rounded-full blur-[100px] -bottom-20 -left-20 animate-[float_8s_ease-in-out_infinite_reverse]" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50 sm:opacity-100">
+            <div className="absolute w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#0066FF]/20 rounded-full blur-[100px] -top-20 -right-20 animate-[float_6s_ease-in-out_infinite]" />
+            <div className="absolute w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#FF3366]/20 rounded-full blur-[100px] -bottom-20 -left-20 animate-[float_8s_ease-in-out_infinite_reverse]" />
           </div>
         </div>
       </main>
